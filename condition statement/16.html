@@ -1,0 +1,34 @@
+<!-- 16. Write a program that calculates income tax based on different income ranges using logical operators. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 16</title>
+</head>
+<body>
+    
+  <script>
+    let income = parseFloat(prompt("Enter your income:"));
+    let tax;
+
+        if (income <= 10000) {
+           tax = income * 0.0; // 0% tax
+        }
+        else if (income <= 20000) {
+           tax = (income - 10000) * 0.1; // 10% tax
+        } 
+        else if (income <= 50000) {
+          tax = 1000 + (income - 20000) * 0.2; // 20% tax
+       } 
+       else {
+          tax = 9000 + (income - 50000) * 0.3; // 30% tax
+        }
+
+        console.log("Income Tax: " + tax);
+
+  </script>
+
+</body>
+</html>

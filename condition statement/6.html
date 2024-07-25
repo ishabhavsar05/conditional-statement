@@ -1,0 +1,44 @@
+    <!-- 6. Write a program that takes a percentage as input and calculates the grade based on the following criteria:
+    A: 90% and above
+    B: 80% to 89%
+    C: 70% to 79%
+    D: 60% to 69%
+    F: below 60% -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 6</title>
+</head>
+<body>
+    
+
+    <script>
+       let perc = prompt("Enter Your Percentage: ");
+
+       if(perc >= 90){
+          console.log("Grade: A");
+       }
+       else{
+          if(perc >= 80){
+           console.log("Grade: B");
+          }
+          else{
+            if(perc >= 70){
+              console.log("Grade: C");
+            }
+            else{
+                if(perc >= 60){
+                  console.log("Grade: D");
+                }
+                else{
+                    console.log("FAIL!");
+                }
+            }
+          }
+       }
+    </script>
+</body>
+</html>

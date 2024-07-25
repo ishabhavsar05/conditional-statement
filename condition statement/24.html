@@ -1,0 +1,36 @@
+<!-- 24. Write a program that calculates the Grade Point Average (GPA) of a
+   student based on their grades in multiple subjects using if-else ladder statements. -->
+
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Question 24</title>
+   </head>
+   <body>
+       <script>
+           let grade1 = parseFloat(prompt("Enter grade in Subject 1 (out of 100):"));
+           let grade2 = parseFloat(prompt("Enter grade in Subject 2 (out of 100):"));
+           let grade3 = parseFloat(prompt("Enter grade in Subject 3 (out of 100):"));
+   
+           let gpa = (grade1 + grade2 + grade3) / 3;
+   
+         if (gpa >= 90) {
+            console.log("A GRADE");
+         } else if (gpa >= 80) {
+            console.log("B GRADE");
+         } else if (gpa >= 70) {
+            console.log("C GRADE");
+         } else if (gpa >= 60) {
+            console.log("D GRADE");
+         } else {
+             console.log("F GRADE");
+         }
+   
+   
+   
+       </script>
+   </body>
+   </html>
+   

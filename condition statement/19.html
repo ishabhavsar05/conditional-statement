@@ -1,0 +1,51 @@
+<!-- 19. Write a program that checks the strength of a password based on its length and the inclusion of different character types
+(uppercase, lowercase, digits, special characters). -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function checkPasswordStrength(password) {
+            let strength = 0;
+            let lengthCriteria = password.length >= 8;
+            let uppercaseCriteria = /[A-Z]/.test(password);
+            let lowercaseCriteria = /[a-z]/.test(password);
+            let digitCriteria = /[0-9]/.test(password);
+            let specialCharCriteria = /[!@#$%^&*(),.?":{}|<>]/.test(password);
+
+            // Increase strength score based on criteria
+            if (lengthCriteria) strength++;
+            if (uppercaseCriteria) strength++;
+            if (lowercaseCriteria) strength++;
+            if (digitCriteria) strength++;
+            if (specialCharCriteria) strength++;
+
+            // Determine strength level
+            if (strength === 5) {
+                return "Strong";
+            } else if (strength >= 3) {
+                return "Medium";
+            } else {
+                return "Weak";
+            }
+        }
+
+        // Examples
+        let password1 = "Password123!";
+        let password2 = "Pass123";
+        let password3 = "password";
+
+        console.log(`Password: ${password1}, Strength: ${checkPasswordStrength(password1)}`); // Output: Strong
+        console.log(`Password: ${password2}, Strength: ${checkPasswordStrength(password2)}`); // Output: Medium
+        console.log(`Password: ${password3}, Strength: ${checkPasswordStrength(password3)}`); // Output: Weak
+    </script>
+</body>
+
+</html>

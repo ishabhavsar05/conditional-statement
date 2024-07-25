@@ -1,0 +1,54 @@
+<!-- 26. Write a program that converts an amount from one currency to another based on user choice using if-else ladder statements. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 26</title>
+</head>
+<body>
+    <script>
+        let amount = parseFloat(prompt("Enter amount to convert:"));
+        let fromCurrency = prompt("Enter from currency (USD, EUR, INR):");
+        let toCurrency = prompt("Enter to currency (USD, EUR, INR):");
+
+        if (fromCurrency === "USD" && toCurrency === "EUR") {
+            let convertedAmount = amount * 0.88;
+            console.log(`${amount} USD is equal to ${convertedAmount} EUR`);
+        }
+        
+        else if (fromCurrency === "USD" && toCurrency === "INR") {
+            let convertedAmount = amount * 74.83;
+            console.log(`${amount} USD is equal to ${convertedAmount} INR`);
+        } 
+        
+        else if (fromCurrency === "EUR" && toCurrency === "USD") {
+            let convertedAmount = amount * 1.14;
+            console.log(`${amount} EUR is equal to ${convertedAmount} USD`);
+        } 
+
+        else if (fromCurrency === "EUR" && toCurrency === "INR") {
+            let convertedAmount = amount * 84.94;
+            console.log(`${amount} EUR is equal to ${convertedAmount} INR`);
+        }
+        
+        else if (fromCurrency === "INR" && toCurrency === "USD") {
+            let convertedAmount = amount * 0.013;
+            console.log(`${amount} INR is equal to ${convertedAmount} USD`);
+        } 
+        
+        else if (fromCurrency === "INR" && toCurrency === "EUR") {
+            let convertedAmount = amount * 0.012;
+            console.log(`${amount} INR is equal to ${convertedAmount} EUR`);
+        } 
+        
+        else {
+           console.log("Invalid currency choice");
+        }
+
+
+
+    </script>
+</body>
+</html>

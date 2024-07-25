@@ -1,0 +1,43 @@
+<!-- 21. Write a program that solves a quadratic equation (ax^2 + bx + c = 0)
+    and determines the nature of its roots using nested if-else statements. -->
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Question 21</title>
+    </head>
+    <body>
+        
+        <script>
+            let a = parseFloat(prompt("Enter coefficient a:"));
+            let b = parseFloat(prompt("Enter coefficient b:"));
+            let c = parseFloat(prompt("Enter coefficient c:"));
+    
+           let discriminant = b * b - 4 * a * c;
+    
+           if (a === 0) {
+               console.log("Not a quadratic equation!");
+           } else {
+              if (discriminant > 0) {
+                  let root1 = (-b + Math.sqrt(discriminant)) / (2 * a);
+                  let root2 = (-b - Math.sqrt(discriminant)) / (2 * a);
+                  console.log(`Two distinct real roots: ${root1} and ${root2}`);
+              } else if (discriminant === 0) {
+                  let root = -b / (2 * a);
+                  console.log(`One repeated real root: ${root}`);
+              } else {
+                   console.log(`"Two distinct complex roots"`);
+              }
+    }
+    
+        </script>
+    </body>
+    </html>
+    
+    <!-- - If a is 0, it's not a quadratic equation.
+    - If the discriminant is greater than 0, there are two distinct real roots.
+    - If the discriminant is 0, there is one repeated real root.
+    - If the discriminant is less than 0, there are two distinct complex roots. -->
+    

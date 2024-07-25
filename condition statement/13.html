@@ -1,0 +1,50 @@
+<!-- 13. Write a program that takes a student's marks in five subjects and calculates the overall grade based on user choice. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 13</title>
+</head>
+<body>
+    
+    <script>
+       let marks1 = parseFloat(prompt("Enter marks in Subject 1:"));
+       let marks2 = parseFloat(prompt("Enter marks in Subject 2:"));
+       let marks3 = parseFloat(prompt("Enter marks in Subject 3:"));
+       let marks4 = parseFloat(prompt("Enter marks in Subject 4:"));
+       let marks5 = parseFloat(prompt("Enter marks in Subject 5:"));
+
+       let choice = prompt("Do you want to calculate overall grade? (y/n)");
+
+    if (choice === "y") {
+        let totalMarks = marks1 + marks2 + marks3 + marks4 + marks5;
+        let average = totalMarks / 5;
+        let grade;
+
+        if (average >= 90) {
+           grade = "A";
+         } 
+        else if (average >= 80) {
+           grade = "B";
+        } 
+        else if (average >= 70) {
+          grade = "C";
+        } 
+        else if (average >= 60) {
+          grade = "D";
+        } 
+        else {
+          grade = "F";
+        }
+        console.log(`Overall Grade: ${grade}`);
+    } 
+    else{
+      console.log("Okay, exiting program!");
+    }
+
+
+    </script>
+</body>
+</html>

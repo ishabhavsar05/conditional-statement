@@ -1,0 +1,29 @@
+<!-- 17. Write a program that takes marks in five subjects and determines if the student has passed or 
+    failed based on the criteria that they must score at least 40% in each subject. -->
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Question 17</title>
+    </head>
+    <body>
+        
+        <script>
+            let sub1 = parseFloat(prompt("Enter Marks of Subject1: "));
+            let sub2 = parseFloat(prompt("Enter Marks of Subject2: "));
+            let sub3 = parseFloat(prompt("Enter Marks of Subject3: "));
+            let sub4 = parseFloat(prompt("Enter Marks of Subject4: "));
+            let sub5 = parseFloat(prompt("Enter Marks of Subject5: "));
+    
+            if(sub1 >= 40 && sub2 >= 40 && sub3 >= 40 && sub4 >= 40 && sub5 >=40 ){
+              console.log("Congratulations! You Passed in the Exam!");
+            }
+            else{
+                console.log("FAILED!");
+            }
+        </script>
+    </body>
+    </html>
+    

@@ -1,0 +1,48 @@
+<!-- 9. Write a program that converts temperature from Celsius to Fahrenheit and 
+     vice versa based on user input using if-else ladder statements. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 9</title>
+</head>
+
+<body>
+
+    <script>
+        function celsiusToFahrenheit(celsius) {
+            return (celsius * 9 / 5) + 32;
+        }
+
+
+        function fahrenheitToCelsius(fahrenheit) {
+            return (fahrenheit - 32) * 5 / 9;
+        }
+
+
+        function temperatureConverter() {
+            let input = prompt("Enter 'C' to convert from Celsius to Fahrenheit or 'F' to convert from Fahrenheit to Celsius:");
+
+            if (input === 'C' || input === 'c') {
+                let celsius = parseFloat(prompt("Enter the temperature in Celsius:"));
+                let fahrenheit = celsiusToFahrenheit(celsius);
+                console.log(`${celsius}°C is equal to ${fahrenheit.toFixed(2)}°F`);
+            } else if (input === 'F' || input === 'f') {
+                let fahrenheit = parseFloat(prompt("Enter the temperature in Fahrenheit:"));
+                let celsius = fahrenheitToCelsius(fahrenheit);
+                console.log(`${fahrenheit}°F is equal to ${celsius.toFixed(2)}°C`);
+            } else {
+                console.log("Invalid input. Please enter 'C' or 'F'.");
+            }
+        }
+
+
+        temperatureConverter();
+
+    </script>
+</body>
+
+</html>

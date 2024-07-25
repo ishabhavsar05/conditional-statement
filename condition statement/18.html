@@ -1,0 +1,35 @@
+<!-- 18. Write a program that calculates the discount based on the total amount
+    spent. Use if-else ladder statements to apply different discount rates for different ranges. -->
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Question 18</title>
+    </head>
+    <body>
+        
+        <script>
+            let totalAmount = parseFloat(prompt("Enter total amount spent:"));
+            let discount;
+    
+            if (totalAmount >= 5000) {
+                discount = totalAmount * 0.1; // 10% discount
+            } else if (totalAmount >= 2000) {
+               discount = totalAmount * 0.07; // 7% discount
+            } else if (totalAmount >= 1000) {
+                discount = totalAmount * 0.05; // 5% discount
+            } else {
+                discount = 0; // no discount
+            }
+    
+            console.log("Discount: " + discount);
+            var amtPay = totalAmount - discount;
+            console.log("Amount to pay: "+ amtPay);
+    
+    
+        </script>
+    </body>
+    </html>
+    

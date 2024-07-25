@@ -1,0 +1,71 @@
+<!-- 10. Write a program that performs basic arithmetic operations
+   (addition, subtraction, multiplication, division) based on user choice. -->
+
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Question 10</title>
+   </head>
+   <body>
+       
+       <script>
+           // Function for addition
+function add(a, b) {
+    return a + b;
+}
+
+// Function for subtraction
+function subtract(a, b) {
+    return a - b;
+}
+
+// Function for multiplication
+function multiply(a, b) {
+    return a * b;
+}
+
+// Function for division
+function divide(a, b) {
+    if (b === 0) {
+        throw new Error("Division by zero is not allowed.");
+    }
+    return a / b;
+}
+
+// Function to perform the chosen operation
+function performOperation() {
+    let operation = prompt("Choose an operation: add, subtract, multiply, divide");
+
+    if (operation === 'add' || operation === 'subtract' || operation === 'multiply' || operation === 'divide') {
+        let num1 = parseFloat(prompt("Enter the first number:"));
+        let num2 = parseFloat(prompt("Enter the second number:"));
+        let result;
+
+        if (operation === 'add') {
+            result = add(num1, num2);
+        } else if (operation === 'subtract') {
+            result = subtract(num1, num2);
+        } else if (operation === 'multiply') {
+            result = multiply(num1, num2);
+        } else if (operation === 'divide') {
+            try {
+                result = divide(num1, num2);
+            } catch (error) {
+                console.error(error.message);
+                return;
+            }
+        }
+        console.log(`The result of ${operation}ing ${num1} and ${num2} is ${result}`);
+    } else {
+        console.log("Invalid operation. Please choose 'add', 'subtract', 'multiply', or 'divide'.");
+    }
+}
+
+// Call the function to start the program
+performOperation();
+       </script>
+   </body>
+   </html>
+   

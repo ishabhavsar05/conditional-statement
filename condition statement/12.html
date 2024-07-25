@@ -1,0 +1,40 @@
+<!-- 12. Write a program that takes the lengths of three sides of a triangle and 
+   determines the type of triangle (equilateral, isosceles, scalene) based on user choice. -->
+
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Question 12</title>
+   </head>
+   <body>
+       
+       <script>
+          let side1 = parseFloat(prompt("Enter first side:"));
+          let side2 = parseFloat(prompt("Enter second side:"));
+          let side3 = parseFloat(prompt("Enter third side:"));
+   
+         let choice = prompt("Do you want to check triangle type? (y/n)");
+   
+           if (choice === "y") {
+              if (side1 === side2 && side2 === side3) {
+                  console.log("Equilateral triangle");
+               }
+              else if (side1 === side2 || side2 === side3 || side1 === side3) {
+                  console.log("Isosceles triangle");
+              } 
+              else {
+              console.log("Scalene triangle");
+              }
+           } 
+           else
+           {
+              console.log("Okay, exiting program!");
+           }
+   
+   
+       </script>
+   </body>
+   </html>
+   
